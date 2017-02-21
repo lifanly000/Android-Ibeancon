@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Second activity"
+        android:onClick="onClick_to_second_activity"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本设备是否支持接收蓝牙低功耗广播?"
+        android:onClick="onClick_judge_iBeacon_support"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="判断是否支持发送IBeacon消息"
+        android:onClick="onClick_judge_iBeacon_support2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="扫描IBeacon设备"
+            android:onClick="onclick_scan"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="获取所在商户信息"
+            android:onClick="onclick_post_channel"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="6"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_ble_scan"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <ListView
+            android:id="@+id/lv_ibeacons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            >
+
+        </ListView>
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            >
+	        <TextView
+	            android:id="@+id/tv_ble_ibeacon_info"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            />
+
+        </ScrollView>-->
+    </LinearLayout>
+
+</LinearLayout>
